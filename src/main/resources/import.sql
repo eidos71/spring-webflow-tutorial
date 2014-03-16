@@ -4,14 +4,10 @@ insert into Account (id,username,firstname,lastname,password,email,desactivation
 insert into Account (id,username,firstname,lastname,password,email,desactivation_date,enabled) values (4,'Paul','Paul','Dupont','password','Paul@Dupont.com', '2016-01-01', true)
 insert into Account (id,username,firstname,lastname,password,email,desactivation_date,enabled) values (5,'Henry','Henry','Deril','password','Henry@Deril.com', '2016-01-01' , true)
 insert into Account (id,username,firstname,lastname,password,email,desactivation_date,enabled) values (6,'Pierre','Pierre','Perme','password','Pierre@Perme.com', '2016-01-01', true)
-
 insert into Account (id,username,firstname,lastname,password,email,desactivation_date,enabled) values (7,'Julie','Julie','Mous','password','Julie@Mous.com', '2016-01-01' , false)
 insert into Account (id,username,firstname,lastname,password,email,desactivation_date,enabled) values (8,'Sandra','Sandra','Treboi','password','Sandra@Treboi.com', '2016-01-01', false)
 insert into Account (id,username,firstname,lastname,password,email,desactivation_date,enabled) values (9,'Marie','Marie','Suilard','password','Marie@Suilard.com', '2016-01-01' , false)
 insert into Account (id,username,firstname,lastname,password,email,desactivation_date,enabled) values (10,'Chris','Chris','Bourdet','password','Chris@Bourdet.com', '2016-01-01', false)
-
-
-
 insert into Address (id,line1,line2,zip_code,city,state,account) values (1,'14 rue thionville', null, '75001', 'Paris', 'France',1)
 insert into Address (id,line1,line2,zip_code,city,state,account) values (2,'12 rue truc', null, '75001', 'Paris', 'France',1)
 insert into Address (id,line1,line2,zip_code,city,state,account) values (3,'4 rue tarl', null, '65001', 'Nevers', 'France', 1)

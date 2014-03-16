@@ -32,13 +32,13 @@ public class Account extends BaseEntity implements Serializable {
 
   private static final long serialVersionUID = 1L;
 
-  @Column(name = "user_name", nullable = false)
+  @Column(name = "username", nullable = false)
   private String username;
 
-  @Column(name = "first_name", nullable = false)
+  @Column(name = "firstname", nullable = false)
   private String firstname;
 
-  @Column(name = "last_name", nullable = false)
+  @Column(name = "lastname", nullable = false)
   private String lastname;
 
   @Column(name = "password", nullable = false)

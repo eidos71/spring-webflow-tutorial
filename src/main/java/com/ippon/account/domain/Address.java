@@ -30,8 +30,8 @@ public class Address extends BaseEntity {
 
   @Pattern(regexp = "\\d\\d\\d\\d\\d")
   @Length(min = 5, max = 5)
-  @Column(name = "zip_code", nullable = false)
-  private String zipCode;
+  @Column(name = "zipcode", nullable = false)
+  private String zipcode;
 
   @Column(name = "city", nullable = false)
   private String city;
@@ -75,15 +75,17 @@ public class Address extends BaseEntity {
     this.state = state;
   }
 
-  public String getZipCode() {
-    return zipCode;
-  }
 
-  public void setZipCode(String zipCode) {
-    this.zipCode = zipCode;
-  }
 
-  public Account getAccount() {
+  public String getZipcode() {
+	return zipcode;
+}
+
+public void setZipcode(String zipcode) {
+	this.zipcode = zipcode;
+}
+
+public Account getAccount() {
     return account;
   }
 
@@ -119,7 +121,7 @@ public class Address extends BaseEntity {
     builder.append("\n");
 
     builder.append("ZIP        : ");
-    builder.append(this.getZipCode());
+    builder.append(this.getZipcode());
     builder.append("\n");
 
     return builder.toString();

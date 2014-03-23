@@ -50,8 +50,7 @@ public abstract class BaseEntity implements Serializable {
     isInitialized = true;
   }
 
-  protected void initDefaultValues() {
-  }
+  abstract protected   void  initDefaultValues() ;
 
   /*
    * (non-Javadoc)

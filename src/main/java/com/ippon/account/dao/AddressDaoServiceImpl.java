@@ -28,7 +28,7 @@ import com.ippon.account.domain.Address_;
 @Repository("addressDaoService")
 public class AddressDaoServiceImpl extends BaseEntityDaoServiceImpl<Address> implements AddressDaoService {
 
-  private final Logger logger = Logger.getLogger(AddressDaoServiceImpl.class);
+  private  static final Logger logger = Logger.getLogger(AddressDaoServiceImpl.class);
 
   public AddressDaoServiceImpl() {
     super(Address.class);

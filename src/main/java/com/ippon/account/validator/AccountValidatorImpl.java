@@ -31,7 +31,7 @@ import com.ippon.account.service.AccountService;
 @Scope("prototype")
 public class AccountValidatorImpl extends BaseEntityValidatorImpl<Account, AccountService, AccountDaoService> implements AccountValidator {
 
-  private final Logger logger = Logger.getLogger(AccountValidator.class);
+  private final static Logger logger = Logger.getLogger(AccountValidator.class);
 
   @Autowired
   protected AccountService accountService;
@@ -49,7 +49,7 @@ public class AccountValidatorImpl extends BaseEntityValidatorImpl<Account, Accou
    * @param messageContext
    */
   private void validateDesactivationDate(Account account, MessageContext messageContext) {
-    SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+    final SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
     try {
       if (StringUtils.isNotEmpty(account.getDesactivationDateStr())) {
         format.parse(account.getDesactivationDateStr());
@@ -66,12 +66,12 @@ public class AccountValidatorImpl extends BaseEntityValidatorImpl<Account, Accou
    * @param account
    * @param messageContext
    */
-  private void validateAccountFields(Account account, MessageContext messageContext) {
-    ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+  private void validateAccountFields(final Account account, MessageContext messageContext) {
+    final ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
     Validator validator = factory.getValidator();
     Set<ConstraintViolation<Account>> constraintViolations = validator.validate(account);
-    if (constraintViolations.size() > 0) {
-      for (ConstraintViolation<Account> contraintes : constraintViolations) {
+    if (!constraintViolations.isEmpty() ) {
+      for (final ConstraintViolation<Account> contraintes : constraintViolations) {
         // Check account
         String propertyPath = contraintes.getPropertyPath().toString();
         // Check addresses

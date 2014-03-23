@@ -32,7 +32,7 @@ public class AddressSearchForm implements Serializable {
   public List<SelectColumn> getColumnNames() {
     List<SelectColumn> allColumnNames = new ArrayList<SelectColumn>();
     for (int i = 0; i < Address_.class.getDeclaredFields().length; i++) {
-      String columnValue = (Address_.class.getDeclaredFields()[i]).getName();
+      String columnValue = Address_.class.getDeclaredFields()[i].getName();
       allColumnNames.add(new SelectColumn(addressService.getMessage("editAccount.field.account.address." + columnValue, null, Locale.getDefault()), columnValue));
     }
     return allColumnNames;
